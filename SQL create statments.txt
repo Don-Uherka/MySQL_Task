@@ -1,0 +1,16 @@
+SELECT `customer`.`Customer_id`,
+    `customer`.`name`,
+    `customer`.`age`,
+    `customer`.`DoB`
+FROM `store`.`customer`;
+SELECT `orders`.`Order_id`,
+    `orders`.`fk_customer_id`,
+    `orders`.`fk_product_id`,
+    `orders`.`DATE_PLACED`,
+    `orders`.`QUANTITY`
+FROM `store`.`orders`
+SELECT `product`.`Product_id`,
+    `product`.`name`,
+    `product`.`price`
+FROM `store`.`product`;
+
