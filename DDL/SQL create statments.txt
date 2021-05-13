@@ -13,4 +13,31 @@ SELECT `product`.`Product_id`,
     `product`.`name`,
     `product`.`price`
 FROM `store`.`product`;
+USE store;
+INSERT INTO customer(name, age, DoB) VALUES('Bri', 23, 12/23/1997);
+INSERT INTO customer(name, age, DoB) VALUES('Don', 23, 05/15/1997);
+INSERT INTO customer(name, age, DoB) VALUES('Tyler', 23, 08/10/1997);
+INSERT INTO customer(name, age, DoB) VALUES('Jesse', 23, 09/10/1997);
+INSERT INTO customer(name, age, DoB) VALUES('Jake', 23, 07/10/1997);
+DESCRIBE customer;
+SELECT * FROM customer;
+INSERT INTO product(name, price) VALUES('GTX3090', 2000);
+INSERT INTO product(name, price) VALUES('Xbox', 600);
+INSERT INTO product(name, price) VALUES('PS5', 550);
+INSERT INTO product(name, price) VALUES('Corsairk100', 200);
+INSERT INTO product(name, price) VALUES('Iphone12', 1100);
+SELECT * FROM product;
+INSERT INTO orders(fk_customer_id, fk_product_id, DATE_PLACED, QUANTITY) VALUES(1, 1, 05/13/2021, 1);
+INSERT INTO orders(fk_customer_id, fk_product_id, DATE_PLACED, QUANTITY) VALUES(5, 2, 05/13/2021, 23);
+INSERT INTO orders(fk_customer_id, fk_product_id, DATE_PLACED, QUANTITY) VALUES(2, 3, 05/13/2021, 4);
+INSERT INTO orders(fk_customer_id, fk_product_id, DATE_PLACED, QUANTITY) VALUES(3, 4, 05/13/2021, 8);
+INSERT INTO orders(fk_customer_id, fk_product_id, DATE_PLACED, QUANTITY) VALUES(4, 5, 05/13/2021, 10);
+SELECT * FROM orders;
+SELECT * FROM orders;
+SELECT * FROM customer WHERE name = 'Bri';
+SELECT * FROM product WHERE price < 1000;
+SELECT * FROM customer cu JOIN orders o ON cu.Customer_id = o.fk_customer_id;
+DESCRIBE orders;
+DESCRIBE customer;
+USE store;
 
